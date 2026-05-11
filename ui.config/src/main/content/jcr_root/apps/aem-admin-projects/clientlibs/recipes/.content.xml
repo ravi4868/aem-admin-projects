@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:ClientLibraryFolder"
+          categories="[aem-admin-projects.recipes]"
+          dependencies="[aem-admin-projects.main]">
+    <css jcr:primaryType="nt:folder">
+        <recipes jcr:primaryType="nt:file" jcr:data="/* Recipe Component Styles */
+
+.recipe-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-header {
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.recipe-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.recipe-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipe-badge-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.recipe-body {
+  padding: 20px;
+}
+
+.recipe-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #2C3E50;
+}
+
+.recipe-description {
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.recipe-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+  padding: 15px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.meta-item {
+  text-align: center;
+}
+
+.meta-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.meta-value {
+  display: block;
+  font-size: 1.2rem;
+  color: #FF6B35;
+  font-weight: 700;
+}
+
+.recipe-content {
+  margin: 20px 0;
+}
+
+.ingredients-section,
+.instructions-section {
+  margin-bottom: 20px;
+}
+
+.ingredients-section h3,
+.instructions-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #2C3E50;
+}
+
+.ingredients-list,
+.instructions-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ingredients-list li,
+.instructions-list li {
+  padding: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #555;
+  line-height: 1.6;
+}
+
+.ingredients-list li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.instructions-list li:before {
+  content: counter(step);
+  counter-increment: step;
+  position: absolute;
+  left: 0;
+  background: #FF6B35;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.instructions-list {
+  counter-reset: step;
+}
+
+.recipe-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.recipe-actions .btn {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .recipe-meta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .recipe-title {
+    font-size: 1.4rem;
+  }
+}
+"/>
+    </css>
+</jcr:root>
