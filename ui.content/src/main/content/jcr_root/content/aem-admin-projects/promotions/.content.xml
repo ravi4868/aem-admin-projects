@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Promotions"
+        sling:resourceType="cq:Page">
+        <par jcr:primaryType="nt:unstructured"
+             sling:resourceType="wcm/foundation/components/responsivegrid">
+            <title
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/title"
+                text="Current Promotions"
+                type="h1"/>
+            <promo1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-admin-projects/components/promo"
+                promoTag="Limited Time Offer"
+                promoTitle="Summer Recipe Collection Sale"
+                promoSubtitle="Get 40% off on our exclusive summer recipes and cooking guides"
+                discountPercentage="{Long}40"
+                primaryCtaText="Shop Now"
+                primaryCtaUrl="/content/aem-admin-projects/recipes"
+                secondaryCtaText="Learn More"
+                secondaryCtaUrl="/content/aem-admin-projects/food-prep"
+                backgroundColor="#FF6B35"/>
+            <promo2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-admin-projects/components/promo"
+                promoTag="Flash Sale"
+                promoTitle="Premium Cooking Course Bundle"
+                promoSubtitle="Learn from professional chefs with our exclusive online courses"
+                discountPercentage="{Long}50"
+                primaryCtaText="Enroll Now"
+                primaryCtaUrl="#"
+                backgroundColor="#2C3E50"/>
+        </par>
+    </jcr:content>
+</jcr:root>

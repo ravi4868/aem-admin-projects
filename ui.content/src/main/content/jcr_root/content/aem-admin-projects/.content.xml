@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AEM Admin Projects"
+        sling:resourceType="cq:Page"
+        cq:template="/conf/aem-admin-projects/settings/wcm/templates/page-template">
+        <par jcr:primaryType="nt:unstructured"
+             sling:resourceType="wcm/foundation/components/responsivegrid">
+            <title
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/title"
+                text="Welcome to AEM Admin Projects"
+                type="h1"/>
+            <text
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/text"
+                text="&lt;p&gt;Explore our collection of recipes, food preparation guides, and special promotions.&lt;/p&gt;"/>
+        </par>
+    </jcr:content>
+</jcr:root>

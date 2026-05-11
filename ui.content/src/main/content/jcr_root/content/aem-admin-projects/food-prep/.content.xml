@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Food Preparation Guides"
+        sling:resourceType="cq:Page">
+        <par jcr:primaryType="nt:unstructured"
+             sling:resourceType="wcm/foundation/components/responsivegrid">
+            <title
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/title"
+                text="Food Preparation Guides"
+                type="h1"/>
+            <text
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/text"
+                text="&lt;p&gt;Master essential cooking techniques with our comprehensive guides.&lt;/p&gt;"/>
+            <foodprep1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-admin-projects/components/food-preparation"
+                preparationTitle="Vegetable Cutting Techniques"
+                foodCategory="Vegetables"
+                difficultyLevel="Beginner"
+                description="Learn the fundamental techniques for cutting vegetables safely and efficiently"/>
+            <foodprep2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-admin-projects/components/food-preparation"
+                preparationTitle="Meat Preparation Methods"
+                foodCategory="Meat & Poultry"
+                difficultyLevel="Intermediate"
+                description="Master the art of preparing different cuts of meat for optimal results"/>
+        </par>
+    </jcr:content>
+</jcr:root>

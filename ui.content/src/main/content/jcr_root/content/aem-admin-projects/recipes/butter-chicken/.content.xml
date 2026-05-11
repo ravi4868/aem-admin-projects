@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Featured Recipe - Butter Chicken"
+        sling:resourceType="cq:Page">
+        <par jcr:primaryType="nt:unstructured"
+             sling:resourceType="wcm/foundation/components/responsivegrid">
+            <recipe
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-admin-projects/components/recipes"
+                recipeName="Butter Chicken"
+                description="Creamy and aromatic Indian curry with tender chicken. Perfect comfort food served with rice or naan bread."
+                cuisineType="Indian"
+                prepTime="{Long}30"
+                cookTime="{Long}40"
+                servings="{Long}6"
+                difficultyLevel="Medium"
+                rating="{Double}4.6">
+                <ingredients jcr:primaryType="nt:unstructured">
+                    <ingredient1>1kg Chicken Breast</ingredient1>
+                    <ingredient2>200ml Yogurt</ingredient2>
+                    <ingredient3>100g Butter</ingredient3>
+                    <ingredient4>400ml Tomato Puree</ingredient4>
+                    <ingredient5>200ml Cream</ingredient5>
+                    <ingredient6>Ginger-Garlic Paste</ingredient6>
+                    <ingredient7>Spices (Garam Masala, Chili, Cumin)</ingredient7>
+                </ingredients>
+                <instructions jcr:primaryType="nt:unstructured">
+                    <step1>Marinate chicken in yogurt and spices for 30 minutes</step1>
+                    <step2>Grill or broil chicken until cooked</step2>
+                    <step3>Heat butter in a pan</step3>
+                    <step4>Add ginger-garlic paste and cook</step4>
+                    <step5>Add tomato puree and simmer</step5>
+                    <step6>Add cream and cooked chicken</step6>
+                    <step7>Simmer for 10 minutes and serve</step7>
+                </instructions>
+            </recipe>
+        </par>
+    </jcr:content>
+</jcr:root>

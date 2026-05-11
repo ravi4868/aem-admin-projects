@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Guide - Vegetable Cutting Techniques"
+        sling:resourceType="cq:Page">
+        <par jcr:primaryType="nt:unstructured"
+             sling:resourceType="wcm/foundation/components/responsivegrid">
+            <foodprep
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-admin-projects/components/food-preparation"
+                preparationTitle="Vegetable Cutting Techniques"
+                foodCategory="Vegetables"
+                difficultyLevel="Beginner"
+                description="Master the fundamental techniques for cutting vegetables safely and efficiently. Learn proper knife handling and various cutting styles used in professional kitchens.">
+                <tools jcr:primaryType="nt:unstructured">
+                    <tool1>Chef's Knife (8-10 inches)</tool1>
+                    <tool2>Cutting Board</tool2>
+                    <tool3>Paring Knife</tool3>
+                    <tool4>Peeler</tool4>
+                    <tool5>Honing Steel</tool5>
+                </tools>
+                <ingredients jcr:primaryType="nt:unstructured">
+                    <ingredient1>Bell Peppers</ingredient1>
+                    <ingredient2>Onions</ingredient2>
+                    <ingredient3>Carrots</ingredient3>
+                    <ingredient4>Tomatoes</ingredient4>
+                    <ingredient5>Cucumbers</ingredient5>
+                </ingredients>
+                <techniques jcr:primaryType="nt:unstructured">
+                    <technique1>Julienne Cut</technique1>
+                    <technique2>Brunoise Cut</technique2>
+                    <technique3>Chiffonade Cut</technique3>
+                    <technique4>Batonnet Cut</technique4>
+                    <technique5>Dice Cut</technique5>
+                </techniques>
+                <proTips jcr:primaryType="nt:unstructured">
+                    <tip1>Always keep your knife sharp for safer and more efficient cutting</tip1>
+                    <tip2>Use the claw grip to protect your fingers while cutting</tip2>
+                    <tip3>Let the knife do the work - don't apply excessive force</tip3>
+                    <tip4>Cut vegetables consistently for even cooking</tip4>
+                    <tip5>Store cut vegetables properly to maintain freshness</tip5>
+                </proTips>
+            </foodprep>
+        </par>
+    </jcr:content>
+</jcr:root>

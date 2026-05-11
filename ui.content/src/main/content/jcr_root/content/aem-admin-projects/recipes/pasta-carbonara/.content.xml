@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Featured Recipe - Pasta Carbonara"
+        sling:resourceType="cq:Page">
+        <par jcr:primaryType="nt:unstructured"
+             sling:resourceType="wcm/foundation/components/responsivegrid">
+            <recipe
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-admin-projects/components/recipes"
+                recipeName="Pasta Carbonara"
+                description="Classic Italian pasta dish made with eggs, guanciale, and pecorino cheese. Creamy, savory, and absolutely delicious."
+                cuisineType="Italian"
+                prepTime="{Long}15"
+                cookTime="{Long}20"
+                servings="{Long}4"
+                difficultyLevel="Easy"
+                rating="{Double}4.8">
+                <ingredients jcr:primaryType="nt:unstructured">
+                    <ingredient1>400g Spaghetti</ingredient1>
+                    <ingredient2>200g Guanciale</ingredient2>
+                    <ingredient3>100g Pecorino Romano</ingredient3>
+                    <ingredient4>4 Large Eggs</ingredient4>
+                    <ingredient5>Black Pepper to taste</ingredient5>
+                    <ingredient6>Salt to taste</ingredient6>
+                </ingredients>
+                <instructions jcr:primaryType="nt:unstructured">
+                    <step1>Bring a large pot of salted water to boil</step1>
+                    <step2>Cook spaghetti until al dente</step2>
+                    <step3>While pasta cooks, fry guanciale until crispy</step3>
+                    <step4>Beat eggs with grated pecorino</step4>
+                    <step5>Combine pasta with guanciale and fat</step5>
+                    <step6>Off heat, add egg mixture and toss quickly</step6>
+                    <step7>Serve with black pepper and extra cheese</step7>
+                </instructions>
+            </recipe>
+        </par>
+    </jcr:content>
+</jcr:root>

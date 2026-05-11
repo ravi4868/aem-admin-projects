@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Recipes"
+        sling:resourceType="cq:Page">
+        <par jcr:primaryType="nt:unstructured"
+             sling:resourceType="wcm/foundation/components/responsivegrid">
+            <title
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/title"
+                text="Our Recipes"
+                type="h1"/>
+            <recipe-grid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-admin-projects/components/recipe-grid"
+                gridTitle="Featured Recipes"
+                gridDescription="Explore our collection of delicious recipes from around the world">
+                <recipe1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-admin-projects/components/recipes"
+                    recipeName="Pasta Carbonara"
+                    description="Classic Italian pasta dish made with eggs, guanciale, and pecorino cheese"
+                    cuisineType="Italian"
+                    prepTime="{Long}15"
+                    cookTime="{Long}20"
+                    servings="{Long}4"
+                    difficultyLevel="Easy"
+                    rating="{Double}4.8"/>
+                <recipe2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-admin-projects/components/recipes"
+                    recipeName="Butter Chicken"
+                    description="Creamy and aromatic Indian curry with tender chicken"
+                    cuisineType="Indian"
+                    prepTime="{Long}30"
+                    cookTime="{Long}40"
+                    servings="{Long}6"
+                    difficultyLevel="Medium"
+                    rating="{Double}4.6"/>
+            </recipe-grid>
+        </par>
+    </jcr:content>
+</jcr:root>
