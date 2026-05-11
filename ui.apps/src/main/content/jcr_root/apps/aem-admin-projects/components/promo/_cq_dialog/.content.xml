@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Dialog"
+          title="Promotional Banner Component"
+          xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <content-tab
+            jcr:primaryType="cq:Panel"
+            title="Content">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <promoTag
+                    jcr:primaryType="cq:Widget"
+                    xtype="textfield"
+                    fieldLabel="Promo Tag"
+                    name="./promoTag"/>
+                <promoTitle
+                    jcr:primaryType="cq:Widget"
+                    xtype="textfield"
+                    fieldLabel="Promo Title"
+                    name="./promoTitle"
+                    allowBlank="false"/>
+                <promoSubtitle
+                    jcr:primaryType="cq:Widget"
+                    xtype="textarea"
+                    fieldLabel="Subtitle"
+                    name="./promoSubtitle"
+                    height="80"/>
+                <keyHighlights
+                    jcr:primaryType="cq:Widget"
+                    xtype="multifield"
+                    fieldLabel="Key Highlights"
+                    name="./keyHighlights">
+                    <fieldConfig jcr:primaryType="nt:unstructured" xtype="textfield"/>
+                </keyHighlights>
+            </items>
+        </content-tab>
+        <offer-tab
+            jcr:primaryType="cq:Panel"
+            title="Offer Details">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <discountPercentage
+                    jcr:primaryType="cq:Widget"
+                    xtype="numberfield"
+                    fieldLabel="Discount Percentage (0-100)"
+                    name="./discountPercentage"/>
+                <promoStartDate
+                    jcr:primaryType="cq:Widget"
+                    xtype="datefield"
+                    fieldLabel="Start Date"
+                    name="./promoStartDate"/>
+                <promoEndDate
+                    jcr:primaryType="cq:Widget"
+                    xtype="datefield"
+                    fieldLabel="End Date"
+                    name="./promoEndDate"/>
+                <termsConditions
+                    jcr:primaryType="cq:Widget"
+                    xtype="textarea"
+                    fieldLabel="Terms & Conditions"
+                    name="./termsConditions"
+                    height="100"/>
+            </items>
+        </offer-tab>
+        <cta-tab
+            jcr:primaryType="cq:Panel"
+            title="Call to Action">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <primaryCtaText
+                    jcr:primaryType="cq:Widget"
+                    xtype="textfield"
+                    fieldLabel="Primary CTA Text"
+                    name="./primaryCtaText"/>
+                <primaryCtaUrl
+                    jcr:primaryType="cq:Widget"
+                    xtype="textfield"
+                    fieldLabel="Primary CTA URL"
+                    name="./primaryCtaUrl"/>
+                <secondaryCtaText
+                    jcr:primaryType="cq:Widget"
+                    xtype="textfield"
+                    fieldLabel="Secondary CTA Text"
+                    name="./secondaryCtaText"/>
+                <secondaryCtaUrl
+                    jcr:primaryType="cq:Widget"
+                    xtype="textfield"
+                    fieldLabel="Secondary CTA URL"
+                    name="./secondaryCtaUrl"/>
+            </items>
+        </cta-tab>
+        <styling-tab
+            jcr:primaryType="cq:Panel"
+            title="Styling">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <backgroundColor
+                    jcr:primaryType="cq:Widget"
+                    xtype="textfield"
+                    fieldLabel="Background Color"
+                    name="./backgroundColor"/>
+                <backgroundImage
+                    jcr:primaryType="cq:Widget"
+                    xtype="html5smartimage"
+                    fieldLabel="Background Image"
+                    name="./backgroundImage"/>
+            </items>
+        </styling-tab>
+    </items>
+</jcr:root>

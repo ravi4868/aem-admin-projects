@@ -1,0 +1,63 @@
+<div class="promo-banner" data-sly-use.promo="com.example.aem.components.PromoComponent" style="${promo.inlineStyle}">
+    <div class="promo-wrapper">
+        <div class="promo-content">
+            <div class="promo-tag" data-sly-test="${promo.promoTag}">
+                ${promo.promoTag}
+            </div>
+
+            <h1 class="promo-title">${promo.promoTitle}</h1>
+            <p class="promo-subtitle" data-sly-test="${promo.promoSubtitle}">${promo.promoSubtitle}</p>
+
+            <div class="discount-section" data-sly-test="${promo.discountPercentage > 0}">
+                <span class="discount-badge badge ${promo.discountBadgeStyle}">
+                    ${promo.discountPercentage}% OFF
+                </span>
+            </div>
+
+            <div class="countdown-section" data-sly-test="${promo.promoEndDate}">
+                <div class="countdown-timer" id="countdown" data-end-date="${promo.promoEndDate}">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="days">0</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="hours">0</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="minutes">0</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="seconds">0</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlights-section" data-sly-test="${promo.keyHighlights.size() > 0}">
+                <ul class="highlights-list">
+                    <li data-sly-repeat="${promo.keyHighlights}">
+                        <span class="highlight-icon">✓</span>
+                        ${item}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="promo-actions">
+                <a class="btn btn-primary" href="${promo.primaryCtaUrl}" data-sly-test="${promo.primaryCtaUrl}">
+                    ${promo.primaryCtaText}
+                </a>
+                <a class="btn btn-secondary" href="${promo.secondaryCtaUrl}" data-sly-test="${promo.secondaryCtaUrl}">
+                    ${promo.secondaryCtaText}
+                </a>
+            </div>
+
+            <div class="terms-section" data-sly-test="${promo.termsConditions}">
+                <p class="terms-text">${promo.termsConditions}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<sly data-sly-call="${'/apps/aem-admin-projects/components/promo/clientlib/js/countdown.js' @ endDate=promo.promoEndDate}"/>

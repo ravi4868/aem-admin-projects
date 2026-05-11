@@ -1,0 +1,271 @@
+.promo-banner {
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF6B35;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+.promo-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.promo-content {
+    text-align: center;
+}
+
+.promo-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.promo-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.promo-subtitle {
+    font-size: 18px;
+    margin: 20px 0 30px 0;
+    opacity: 0.9;
+}
+
+.discount-section {
+    margin: 30px 0;
+}
+
+.discount-badge {
+    font-size: 32px;
+    padding: 15px 30px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.badge-danger {
+    background-color: #e74c3c;
+}
+
+.badge-warning {
+    background-color: #f39c12;
+}
+
+.badge-success {
+    background-color: #27ae60;
+}
+
+.countdown-section {
+    margin: 40px 0;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px 25px;
+    border-radius: 8px;
+    min-width: 80px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.countdown-item:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.countdown-value {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.countdown-label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+.highlights-section {
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.highlights-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.highlights-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.highlight-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.promo-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 40px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: white;
+    color: #FF6B35;
+}
+
+.btn-primary:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.terms-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.terms-text {
+    font-size: 12px;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .promo-banner {
+        min-height: 300px;
+        padding: 30px 15px;
+    }
+
+    .promo-title {
+        font-size: 32px;
+    }
+
+    .promo-subtitle {
+        font-size: 16px;
+    }
+
+    .countdown-timer {
+        gap: 10px;
+    }
+
+    .countdown-item {
+        min-width: 70px;
+        padding: 15px 15px;
+    }
+
+    .countdown-value {
+        font-size: 20px;
+    }
+
+    .discount-badge {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo-banner {
+        min-height: 250px;
+        padding: 20px 10px;
+    }
+
+    .promo-title {
+        font-size: 24px;
+    }
+
+    .promo-subtitle {
+        font-size: 14px;
+    }
+
+    .promo-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .countdown-timer {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 5px;
+    }
+
+    .countdown-item {
+        min-width: 60px;
+        padding: 10px 10px;
+    }
+
+    .countdown-value {
+        font-size: 16px;
+    }
+}

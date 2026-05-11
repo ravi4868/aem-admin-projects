@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Dialog"
+          title="Food Preparation Component"
+          xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <basic-tab
+            jcr:primaryType="cq:Panel"
+            title="Basic Information">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <preparationTitle
+                    jcr:primaryType="cq:Widget"
+                    xtype="textfield"
+                    fieldLabel="Preparation Title"
+                    name="./preparationTitle"
+                    allowBlank="false"/>
+                <foodCategory
+                    jcr:primaryType="cq:Widget"
+                    xtype="selection"
+                    fieldLabel="Food Category"
+                    name="./foodCategory">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <vegetables jcr:primaryType="nt:unstructured" text="Vegetables" value="Vegetables"/>
+                        <meat jcr:primaryType="nt:unstructured" text="Meat & Poultry" value="Meat & Poultry"/>
+                        <fish jcr:primaryType="nt:unstructured" text="Fish & Seafood" value="Fish & Seafood"/>
+                        <grains jcr:primaryType="nt:unstructured" text="Grains & Pasta" value="Grains & Pasta"/>
+                    </options>
+                </foodCategory>
+                <difficultyLevel
+                    jcr:primaryType="cq:Widget"
+                    xtype="selection"
+                    fieldLabel="Difficulty Level"
+                    name="./difficultyLevel">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <beginner jcr:primaryType="nt:unstructured" text="Beginner" value="Beginner"/>
+                        <intermediate jcr:primaryType="nt:unstructured" text="Intermediate" value="Intermediate"/>
+                        <advanced jcr:primaryType="nt:unstructured" text="Advanced" value="Advanced"/>
+                    </options>
+                </difficultyLevel>
+                <description
+                    jcr:primaryType="cq:Widget"
+                    xtype="textarea"
+                    fieldLabel="Description"
+                    name="./description"
+                    height="100"/>
+            </items>
+        </basic-tab>
+        <tools-tab
+            jcr:primaryType="cq:Panel"
+            title="Tools & Ingredients">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <tools
+                    jcr:primaryType="cq:Widget"
+                    xtype="multifield"
+                    fieldLabel="Tools Required"
+                    name="./tools">
+                    <fieldConfig jcr:primaryType="nt:unstructured" xtype="textfield"/>
+                </tools>
+                <ingredients
+                    jcr:primaryType="cq:Widget"
+                    xtype="multifield"
+                    fieldLabel="Essential Ingredients"
+                    name="./ingredients">
+                    <fieldConfig jcr:primaryType="nt:unstructured" xtype="textfield"/>
+                </ingredients>
+            </items>
+        </tools-tab>
+        <techniques-tab
+            jcr:primaryType="cq:Panel"
+            title="Techniques">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <techniques
+                    jcr:primaryType="cq:Widget"
+                    xtype="multifield"
+                    fieldLabel="Preparation Techniques"
+                    name="./techniques">
+                    <fieldConfig jcr:primaryType="nt:unstructured" xtype="textfield"/>
+                </techniques>
+                <proTips
+                    jcr:primaryType="cq:Widget"
+                    xtype="multifield"
+                    fieldLabel="Pro Tips & Tricks"
+                    name="./proTips">
+                    <fieldConfig jcr:primaryType="nt:unstructured" xtype="textarea"/>
+                </proTips>
+            </items>
+        </techniques-tab>
+        <media-tab
+            jcr:primaryType="cq:Panel"
+            title="Media">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <demonstrationImage
+                    jcr:primaryType="cq:Widget"
+                    xtype="html5smartimage"
+                    fieldLabel="Demonstration Image"
+                    name="./demonstrationImage"/>
+            </items>
+        </media-tab>
+    </items>
+</jcr:root>

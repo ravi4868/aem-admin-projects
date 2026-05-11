@@ -1,0 +1,51 @@
+<div class="recipe-grid-wrapper" data-sly-use.recipeGrid="com.example.aem.components.RecipeGridComponent">
+    <div class="recipe-grid-header" data-sly-test="${recipeGrid.gridTitle || recipeGrid.gridDescription}">
+        <h2 class="recipe-grid-title" data-sly-test="${recipeGrid.gridTitle}">${recipeGrid.gridTitle}</h2>
+        <p class="recipe-grid-description" data-sly-test="${recipeGrid.gridDescription}">${recipeGrid.gridDescription}</p>
+    </div>
+
+    <div class="${recipeGrid.gridCssClasses}">
+        <div data-sly-resource="${@path='layout', resourceType='wcm/foundation/components/responsivegrid'}"></div>
+    </div>
+</div>
+
+<style>
+    .recipe-grid {
+        display: grid;
+        gap: 20px;
+        margin: 20px 0;
+    }
+
+    .recipe-grid-desktop-3 {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .recipe-grid-desktop-4 {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .recipe-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .recipe-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 768px) {
+        .recipe-grid-tablet-2 {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+    }
+
+    @media (max-width: 480px) {
+        .recipe-grid-mobile-1 {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

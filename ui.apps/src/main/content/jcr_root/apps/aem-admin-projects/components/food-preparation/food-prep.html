@@ -1,0 +1,63 @@
+<div class="food-prep-component" data-sly-use.foodPrep="com.example.aem.components.FoodPreparationComponent">
+    <div class="food-prep-header">
+        <div class="food-prep-image" data-sly-test="${foodPrep.demonstrationImage}">
+            <img src="${foodPrep.demonstrationImage}" alt="${foodPrep.preparationTitle}" class="img-fluid">
+        </div>
+        <div class="food-prep-info">
+            <h1 class="food-prep-title">${foodPrep.preparationTitle}</h1>
+            <p class="food-prep-category">
+                <span class="category-icon">${foodPrep.getCategoryIcon()}</span>
+                ${foodPrep.foodCategory}
+            </p>
+            <span class="badge ${foodPrep.difficultyBadgeClass}">${foodPrep.difficultyLevel}</span>
+            <p class="food-prep-description">${foodPrep.description}</p>
+        </div>
+    </div>
+
+    <div class="food-prep-body">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="tools-section" data-sly-test="${foodPrep.tools.size() > 0}">
+                    <h3>🔧 Tools & Equipment</h3>
+                    <ul class="tools-list">
+                        <li data-sly-repeat="${foodPrep.tools}">${item}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="ingredients-section" data-sly-test="${foodPrep.ingredients.size() > 0}">
+                    <h3>🥘 Essential Ingredients</h3>
+                    <ul class="ingredients-list">
+                        <li data-sly-repeat="${foodPrep.ingredients}">${item}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pro-tips-section" data-sly-test="${foodPrep.proTips.size() > 0}">
+                    <h3>💡 Pro Tips</h3>
+                    <ul class="pro-tips-list">
+                        <li data-sly-repeat="${foodPrep.proTips}">${item}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="techniques-section" data-sly-test="${foodPrep.techniques.size() > 0}">
+            <h3>📚 Preparation Techniques</h3>
+            <div class="accordion" id="techniquesAccordion">
+                <div class="accordion-item" data-sly-repeat="${foodPrep.techniques}">
+                    <h2 class="accordion-header" id="heading${itemList.index}">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${itemList.index}">
+                            ${item}
+                        </button>
+                    </h2>
+                    <div id="collapse${itemList.index}" class="accordion-collapse collapse" data-bs-parent="#techniquesAccordion">
+                        <div class="accordion-body">
+                            Detailed technique description and step-by-step instructions go here.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

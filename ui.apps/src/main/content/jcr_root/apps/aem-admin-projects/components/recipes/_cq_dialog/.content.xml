@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Dialog"
+          title="Recipe Card Component"
+          xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <basic-tab
+            jcr:primaryType="cq:Panel"
+            title="Basic Information">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <recipeName
+                    jcr:primaryType="cq:Widget"
+                    xtype="textfield"
+                    fieldLabel="Recipe Name"
+                    name="./recipeName"
+                    allowBlank="false"/>
+                <description
+                    jcr:primaryType="cq:Widget"
+                    xtype="textarea"
+                    fieldLabel="Description"
+                    name="./description"
+                    height="100"/>
+                <cuisineType
+                    jcr:primaryType="cq:Widget"
+                    xtype="selection"
+                    fieldLabel="Cuisine Type"
+                    name="./cuisineType">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <italian jcr:primaryType="nt:unstructured" text="Italian" value="Italian"/>
+                        <indian jcr:primaryType="nt:unstructured" text="Indian" value="Indian"/>
+                        <mexican jcr:primaryType="nt:unstructured" text="Mexican" value="Mexican"/>
+                        <chinese jcr:primaryType="nt:unstructured" text="Chinese" value="Chinese"/>
+                        <french jcr:primaryType="nt:unstructured" text="French" value="French"/>
+                    </options>
+                </cuisineType>
+            </items>
+        </basic-tab>
+        <details-tab
+            jcr:primaryType="cq:Panel"
+            title="Recipe Details">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <prepTime
+                    jcr:primaryType="cq:Widget"
+                    xtype="numberfield"
+                    fieldLabel="Prep Time (minutes)"
+                    name="./prepTime"/>
+                <cookTime
+                    jcr:primaryType="cq:Widget"
+                    xtype="numberfield"
+                    fieldLabel="Cook Time (minutes)"
+                    name="./cookTime"/>
+                <servings
+                    jcr:primaryType="cq:Widget"
+                    xtype="numberfield"
+                    fieldLabel="Servings"
+                    name="./servings"/>
+                <difficultyLevel
+                    jcr:primaryType="cq:Widget"
+                    xtype="selection"
+                    fieldLabel="Difficulty Level"
+                    name="./difficultyLevel">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <easy jcr:primaryType="nt:unstructured" text="Easy" value="Easy"/>
+                        <medium jcr:primaryType="nt:unstructured" text="Medium" value="Medium"/>
+                        <hard jcr:primaryType="nt:unstructured" text="Hard" value="Hard"/>
+                    </options>
+                </difficultyLevel>
+                <rating
+                    jcr:primaryType="cq:Widget"
+                    xtype="numberfield"
+                    fieldLabel="Rating (0-5)"
+                    name="./rating"/>
+            </items>
+        </details-tab>
+        <ingredients-tab
+            jcr:primaryType="cq:Panel"
+            title="Ingredients & Instructions">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <ingredients
+                    jcr:primaryType="cq:Widget"
+                    xtype="multifield"
+                    fieldLabel="Ingredients"
+                    name="./ingredients">
+                    <fieldConfig jcr:primaryType="nt:unstructured" xtype="textfield"/>
+                </ingredients>
+                <instructions
+                    jcr:primaryType="cq:Widget"
+                    xtype="multifield"
+                    fieldLabel="Instructions"
+                    name="./instructions">
+                    <fieldConfig jcr:primaryType="nt:unstructured" xtype="textarea"/>
+                </instructions>
+            </items>
+        </ingredients-tab>
+        <media-tab
+            jcr:primaryType="cq:Panel"
+            title="Media">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <recipeImage
+                    jcr:primaryType="cq:Widget"
+                    xtype="html5smartimage"
+                    fieldLabel="Recipe Image"
+                    name="./recipeImage"/>
+            </items>
+        </media-tab>
+    </items>
+</jcr:root>
