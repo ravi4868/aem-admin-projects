@@ -1,0 +1,25 @@
+<div class="testimonial-component" data-sly-use.testimonial="com.example.aem.components.TestimonialComponent">
+    <div class="testimonial-wrapper">
+        <div class="testimonial-content">
+            <div class="testimonial-text">
+                <p>${testimonial.testimonialText}</p>
+            </div>
+            <div class="testimonial-rating">
+                <span class="rating-stars">${testimonial.ratingStars}</span>
+            </div>
+        </div>
+        <div class="testimonial-author">
+            <div class="author-image-wrapper" data-sly-test="${testimonial.authorImage}">
+                <img src="${testimonial.authorImage}" alt="${testimonial.authorName}" class="author-image"/>
+            </div>
+            <div class="author-info">
+                <h4 class="author-name">${testimonial.authorName}</h4>
+                <p class="author-role" data-sly-test="${testimonial.authorRole}">${testimonial.authorRole}</p>
+                <p class="author-company" data-sly-test="${testimonial.authorCompany}">${testimonial.authorCompany}</p>
+            </div>
+        </div>
+        <div class="testimonial-badge" data-sly-test="${testimonial.featured}">
+            <span>Featured</span>
+        </div>
+    </div>
+</div>

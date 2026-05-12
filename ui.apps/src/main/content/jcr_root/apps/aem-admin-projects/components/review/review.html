@@ -1,0 +1,32 @@
+<div class="review-component" data-sly-use.review="com.example.aem.components.ReviewComponent">
+    <div class="review-wrapper">
+        <div class="review-header">
+            <h3 class="review-title">${review.reviewTitle}</h3>
+            <div class="review-meta">
+                <span class="reviewer-name">${review.reviewerName}</span>
+                <span class="review-date" data-sly-test="${review.reviewDate}">${review.reviewDate}</span>
+                <span class="verified-badge" data-sly-test="${review.verified}">✓ Verified Purchase</span>
+            </div>
+        </div>
+        <div class="review-ratings">
+            <div class="rating-item">
+                <span class="rating-label">Overall:</span>
+                <span class="rating-stars">${'★' @ repeat=review.overallRating}</span>
+            </div>
+            <div class="rating-item" data-sly-test="${review.tasteRating}">
+                <span class="rating-label">Taste:</span>
+                <span class="rating-stars">${'★' @ repeat=review.tasteRating}</span>
+            </div>
+            <div class="rating-item" data-sly-test="${review.presentationRating}">
+                <span class="rating-label">Presentation:</span>
+                <span class="rating-stars">${'★' @ repeat=review.presentationRating}</span>
+            </div>
+        </div>
+        <div class="review-content">
+            <p>${review.reviewContent}</p>
+        </div>
+        <div class="review-footer">
+            <button class="helpful-button" data-count="${review.helpfulCount}">👍 Helpful (${review.helpfulCount})</button>
+        </div>
+    </div>
+</div>

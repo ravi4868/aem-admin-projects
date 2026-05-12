@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Feature Highlight Dialog"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <section jcr:primaryType="nt:unstructured" jcr:title="Section Details" sling:resourceType="granite/ui/components/foundation/section">
+                        <layout jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <sectionTitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/textfield" fieldLabel="Section Title" name="./sectionTitle"/>
+                                    <sectionDescription jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/textarea" fieldLabel="Section Description" name="./sectionDescription"/>
+                                    <layoutStyle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/select" fieldLabel="Layout Style" name="./layoutStyle">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <grid jcr:primaryType="nt:unstructured" text="Grid (2x2)" value="grid"/>
+                                            <horizontal jcr:primaryType="nt:unstructured" text="Horizontal" value="horizontal"/>
+                                            <vertical jcr:primaryType="nt:unstructured" text="Vertical" value="vertical"/>
+                                        </items>
+                                    </layoutStyle>
+                                </items>
+                            </column>
+                        </items>
+                    </section>
+                    <feature1 jcr:primaryType="nt:unstructured" jcr:title="Feature 1" sling:resourceType="granite/ui/components/foundation/section">
+                        <layout jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <feature1Title jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/textfield" fieldLabel="Feature Title" name="./feature1Title"/>
+                                    <feature1Description jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/textarea" fieldLabel="Feature Description" name="./feature1Description"/>
+                                    <feature1Icon jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/fileupload" fieldLabel="Feature Icon" name="./feature1Icon" allowUpload="{Boolean}true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </feature1>
+                    <feature2 jcr:primaryType="nt:unstructured" jcr:title="Feature 2" sling:resourceType="granite/ui/components/foundation/section">
+                        <layout jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <feature2Title jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/textfield" fieldLabel="Feature Title" name="./feature2Title"/>
+                                    <feature2Description jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/textarea" fieldLabel="Feature Description" name="./feature2Description"/>
+                                    <feature2Icon jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/fileupload" fieldLabel="Feature Icon" name="./feature2Icon" allowUpload="{Boolean}true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </feature2>
+                    <feature3 jcr:primaryType="nt:unstructured" jcr:title="Feature 3" sling:resourceType="granite/ui/components/foundation/section">
+                        <layout jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <feature3Title jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/textfield" fieldLabel="Feature Title" name="./feature3Title"/>
+                                    <feature3Description jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/textarea" fieldLabel="Feature Description" name="./feature3Description"/>
+                                    <feature3Icon jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/fileupload" fieldLabel="Feature Icon" name="./feature3Icon" allowUpload="{Boolean}true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </feature3>
+                    <feature4 jcr:primaryType="nt:unstructured" jcr:title="Feature 4" sling:resourceType="granite/ui/components/foundation/section">
+                        <layout jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <feature4Title jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/textfield" fieldLabel="Feature Title" name="./feature4Title"/>
+                                    <feature4Description jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/textarea" fieldLabel="Feature Description" name="./feature4Description"/>
+                                    <feature4Icon jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/fileupload" fieldLabel="Feature Icon" name="./feature4Icon" allowUpload="{Boolean}true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </feature4>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

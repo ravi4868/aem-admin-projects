@@ -1,0 +1,38 @@
+<div class="feature-highlight-component" data-sly-use.feature="com.example.aem.components.FeatureHighlightComponent">
+    <div class="feature-section">
+        <div class="feature-header" data-sly-test="${feature.sectionTitle}">
+            <h2 class="feature-section-title">${feature.sectionTitle}</h2>
+            <p class="feature-section-description" data-sly-test="${feature.sectionDescription}">${feature.sectionDescription}</p>
+        </div>
+        <div class="feature-grid" data-layout="${feature.layoutStyle}">
+            <div class="feature-item" data-sly-test="${feature.feature1Title}">
+                <div class="feature-icon-wrapper" data-sly-test="${feature.feature1Icon}">
+                    <img src="${feature.feature1Icon}" alt="${feature.feature1Title}" class="feature-icon"/>
+                </div>
+                <h3 class="feature-title">${feature.feature1Title}</h3>
+                <p class="feature-description">${feature.feature1Description}</p>
+            </div>
+            <div class="feature-item" data-sly-test="${feature.feature2Title}">
+                <div class="feature-icon-wrapper" data-sly-test="${feature.feature2Icon}">
+                    <img src="${feature.feature2Icon}" alt="${feature.feature2Title}" class="feature-icon"/>
+                </div>
+                <h3 class="feature-title">${feature.feature2Title}</h3>
+                <p class="feature-description">${feature.feature2Description}</p>
+            </div>
+            <div class="feature-item" data-sly-test="${feature.feature3Title}">
+                <div class="feature-icon-wrapper" data-sly-test="${feature.feature3Icon}">
+                    <img src="${feature.feature3Icon}" alt="${feature.feature3Title}" class="feature-icon"/>
+                </div>
+                <h3 class="feature-title">${feature.feature3Title}</h3>
+                <p class="feature-description">${feature.feature3Description}</p>
+            </div>
+            <div class="feature-item" data-sly-test="${feature.feature4Title}">
+                <div class="feature-icon-wrapper" data-sly-test="${feature.feature4Icon}">
+                    <img src="${feature.feature4Icon}" alt="${feature.feature4Title}" class="feature-icon"/>
+                </div>
+                <h3 class="feature-title">${feature.feature4Title}</h3>
+                <p class="feature-description">${feature.feature4Description}</p>
+            </div>
+        </div>
+    </div>
+</div>

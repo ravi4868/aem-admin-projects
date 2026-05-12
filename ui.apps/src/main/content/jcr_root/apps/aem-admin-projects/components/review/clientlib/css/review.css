@@ -1,0 +1,126 @@
+.review-component {
+    margin: 2rem 0;
+    padding: 0;
+}
+
+.review-wrapper {
+    background: white;
+    border: 1px solid #e0e0e0;
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.review-header {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.review-title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.review-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: #666;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.reviewer-name {
+    font-weight: 500;
+    color: #333;
+}
+
+.review-date {
+    color: #999;
+}
+
+.verified-badge {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.review-ratings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.rating-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.rating-label {
+    font-weight: 500;
+    color: #666;
+    font-size: 0.9rem;
+    min-width: 70px;
+}
+
+.rating-stars {
+    font-size: 1rem;
+    color: #ffc107;
+    letter-spacing: 0.2rem;
+}
+
+.review-content {
+    margin: 1.5rem 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.review-content p {
+    margin: 0;
+}
+
+.review-footer {
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.helpful-button {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.helpful-button:hover {
+    background: #e8e8e8;
+    border-color: #999;
+}
+
+@media (max-width: 768px) {
+    .review-wrapper {
+        padding: 1rem;
+    }
+    
+    .review-meta {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    .review-ratings {
+        grid-template-columns: 1fr;
+    }
+}
